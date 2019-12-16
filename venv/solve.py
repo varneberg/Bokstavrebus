@@ -1,26 +1,33 @@
 import random
+from itertools import permutations
 
 
 def shuffle(s):
-    char_list = list(s)
-    random.shuffle(char_list)
-    new_s = ''.join(char_list)
-    return new_s
+    perms = [''.join(p) for p in permutations(s)]
+    perms = set(perms)
+    return perms
+
+
+def sort_list(word):
+    list = []
+    with open("ordlister/big_ordliste.txt", 'r') as f:
+        for line in f:
+            line = line.strip().lower()
+            if len(word) == len(line):
+                list.append(line)
+    list.sort()
+    sorted_list = set(list)
+    return sorted_set
+
 
 def solve():
     s = input("Hvilke bokstaver er opgitt?\n").lower()
-    while True:
-        new_word = shuffle(s)
-        print(new_word)
-        with open("ordlister/ordliste_snl_fellesord.txt", 'r') as fp:
-            filecontent = fp.readlines()
-            for line in filecontent:
-                process(line)
-                #line = line.strip()
-                if new_word == line:
-                    return new_word
+    sorted_list = sort_list(s)
+    new_word = shuffle(s)
+    return new_word.intersection(sorted_list)
 
 
-
-
-print(solve())
+if __name__ == '__main__':
+    answers = solve()
+    for x in answers:
+        print("{}".format(x))
