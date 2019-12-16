@@ -10,24 +10,24 @@ def shuffle(s):
 
 def sort_list(word):
     list = []
-    with open("ordlister/big_ordliste.txt", 'r') as f:
+    with open("big_no_wordlist.txt", 'r') as f:
         for line in f:
             line = line.strip().lower()
             if len(word) == len(line):
                 list.append(line)
     list.sort()
-    sorted_list = set(list)
+    sorted_set = set(list)
     return sorted_set
 
 
-def solve():
-    s = input("Hvilke bokstaver er opgitt?\n").lower()
+def solve(s):
     sorted_list = sort_list(s)
     new_word = shuffle(s)
     return new_word.intersection(sorted_list)
 
 
 if __name__ == '__main__':
-    answers = solve()
+    s = input("Hvilke bokstaver er opgitt?\n").lower()
+    answers = solve(s)
     for x in answers:
         print("{}".format(x))
