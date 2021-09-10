@@ -1,4 +1,5 @@
-# Norwegian-Letter-Scramble-Solver
-A simple script for solving letter puzzles where letters in a word are mixed and you are to figure out what word they can spell out.
-The program has a generated wordlist and a function to generate a new wordlist for the program to use if so desired.
-The program comes pre-packaged with a combination of all norwegian wordlists I was able to find, and has still not failed for a single word I have tried(but if you find one, please let me know;) )
+# Bokstavrebus
+Dette programmet er ment for å løse oppgaver der en blir presentert med en blanding av bokstaver og skal finne hvilke ord som gjemmer seg bak. Inspirasjonen kommer fra diverse nettsider som har konkurranser der man skal løse slike oppgaver(feks julekalendere). 
+
+## Ordlister
+Ordlister brukes for å sammenlikne forskjellige permutasjonene av de presenterte bokstavene. Dersom det skulle mangle noen ord er det lagt hjelperfunksjoner for å legge til nye ord og lage ordlister med disse. 
