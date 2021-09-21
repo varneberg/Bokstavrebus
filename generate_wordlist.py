@@ -34,13 +34,13 @@ def regen_list():
     write_list("ordlister/ordliste_snl_fellesord.txt", temp_file)
     write_list("ordlister/ordliste_ssb_norske_etternavn.txt", temp_file)
     write_list("ordlister/ordliste_ssb_norske_fornavn.txt", temp_file)
-    write_list("ordlister/ordliste_aspell_en.txt", temp_file)
+    #write_list("ordlister/ordliste_aspell_en.txt", temp_file)
     write_list("ordlister/norske_scrabble_ord.txt", temp_file)
     write_list("ordlister/ordliste_aspell_no.txt", temp_file)
 
 
 
-    correct_list(temp_file, "big_no_wordlist.txt")
+    correct_list(temp_file, "wordlist.txt")
 
 def add_word(word):
     open("big_no_wordlist.txt")
